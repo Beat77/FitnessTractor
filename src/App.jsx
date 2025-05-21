@@ -19,5 +19,6 @@ export default function App() {
   if (page === "login") return <Login />;
   if (page === "activities") return <ActivitiesPage />;
 
+ 
   return <Error404 />;
 }
