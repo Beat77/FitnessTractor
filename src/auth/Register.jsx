@@ -1,23 +1,10 @@
-import { useState } from "react";
-import { useAuth } from "./AuthContext";
+import { Link } from "react-router";
 
 /** A form that allows users to register for a new account */
 export default function Register() {
-  const { register } = useAuth();
-  const { setPage } = usePage();
+  
+ <Link to ="/activities"></Link>
 
-  const [error, setError] = useState(null);
-
-  const tryRegister = async (formData) => {
-    const username = formData.get("username");
-    const password = formData.get("password");
-    try {
-      await register({ username, password });
-      setPage("activities");
-    } catch (e) {
-      setError(e.message);
-    }
-  };
 
   return (
     <>
@@ -34,9 +21,9 @@ export default function Register() {
         <button>Register</button>
         {error && <output>{error}</output>}
       </form>
-      <a onClick={() => setPage("login")}>
-        Already have an account? Log in here.
-      </a>
+      <Link to ="/login">Already have an account? Log in here. Login </Link>
+        
+      
     </>
   );
 }

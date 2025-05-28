@@ -4,7 +4,6 @@ import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ActivitiesPage from "./activities/ActivitiesPage";
 import Error404 from "./Error404.jsx";
-import useQuery from "./api/useQuery";
 import { Route,Routes } from "react-router";
 import Layout from "./layout/Layout.jsx";
 

@@ -10,7 +10,7 @@ const { token } = useAuth();
   } = useMutation("DELETE","/activities/"+activity.id,["activities"])
 
 
-return <li>{activity.name}{
+return <li>{activity.name, activity.description}{
     token?<button onClick={()=>deletedActivity()}>Delete</button>:null
 }
 </li>
